@@ -1,0 +1,8 @@
+#map {
+    height: 400px;
+    filter: blur(10px);
+}
+
+#backButton {
+    margin-top: 10px;
+}
