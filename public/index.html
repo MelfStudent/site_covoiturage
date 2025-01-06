@@ -8,32 +8,27 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+<body>
 
-    <div class="container text-center">
+    <div class="container">
 
-        <div id="loginContainer" class="card p-4" style="max-width: 500px; width: 100%;">
-            <h1 class="display-4 fw-bold mb-4">PING</h1>
+        <div id="loginContainer" class="card p-4">
+            <h1 class="display-4 fw-bold mb-4 text-center">PING</h1>
 
             <div id="loginForm">
                 <div class="mb-3 text-start">
-                    <label for="number" class="form-label fw-medium">Identifiant (1-30)</label>
+                    <label for="number" class="form-label fw-medium w-100">Identifiant (1-30)</label>
                     <input type="number" id="number" min="1" max="30" placeholder="Numéro (1-30)" required 
-                        class="form-control">
+                        class="form-control w-100">
                 </div>
                 <button onclick="login()" class="btn btn-dark w-100">Se connecter</button>
             </div>
         </div>
 
         <div id="mapContainer" style="display: none;">
-            <h1 class="fw-bold mb-4" style="text-align: left;">PING - Page Principale</h1>
+            <h1 class="fw-bold mb-4 text-start">PING - Page Principale</h1>
             
             <div id="nameForm" class="mb-4 text-start">
-                <div class="mb-3">
-                    <label for="name" class="form-label fw-medium">Nom</label>
-                    <input type="text" id="name" placeholder="Votre nom" required 
-                        class="form-control mb-2" />
-                </div>
                 <div class="mb-3">
                     <label for="firstname" class="form-label fw-medium">Prénom</label>
                     <input type="text" id="firstname" placeholder="Votre Prénom" required 
@@ -42,7 +37,7 @@
                 <button onclick="setUsername()" class="btn btn-dark w-100">Valider</button>
             </div>
 
-            <div id="map" style="height: 400px;margin-top: 50px; margin-bottom: 50px;"></div>
+            <div id="map" style="margin-top: 50px; margin-bottom: 50px;"></div>
 
             <button id="backButton" onclick="backToLogin()" class="btn btn-dark w-100">Retour au menu principal</button>
         </div>
