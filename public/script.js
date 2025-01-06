@@ -96,13 +96,6 @@ function initMap() {
 
 socket.on('allPings', (pings) => {
     pings.forEach(addPingToMap);
-    if (currentNumber == 42) {
-        const generateButton = document.createElement('button');
-        generateButton.classList.add('btn', 'btn-danger', 'w-100', 'mt-4');
-        generateButton.textContent = "Générer le fichier des distances";
-        generateButton.onclick = generateDistanceFile;
-        document.getElementById('mapContainer').appendChild(generateButton);
-    }
 });
 
 socket.on('newPing', addPingToMap);
